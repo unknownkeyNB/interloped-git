@@ -4,15 +4,15 @@ cp ./start.mp3 ~/
 cp ./sourcebox.mp3 ~/
 cp ./exit.mp3 ~/
 clear
-echo 'git() {'
-echo 'play ~/start.mp3 -q'
-echo 'if [ "$1" = "pull" ]; then'
-echo 'play ~/sourcebox.mp3 -q &'
-echo 'MUSIC_PID=$!'
-echo 'command git pull "${@:2}"
-echo 'play ~/exit.mp3 -q'
-echo 'else'
-echo 'command git "$@"
-echo 'play ~/exit.mp3 -q'
-echo 'fi'
-echo '}'
+echo 'git() {' >> ~/.bashrc
+echo 'play ~/start.mp3 -q' >> ~/.bashrc
+echo 'if [ "$1" = "pull" ]; then' >> ~/.bashrc
+echo 'play ~/sourcebox.mp3 -q &' >> ~/.bashrc
+echo 'MUSIC_PID=$!' >> ~/.bashrc
+echo 'command git pull "${@:2}' >> ~/.bashrc
+echo 'play ~/exit.mp3 -q' >> ~/.bashrc
+echo 'else' >> ~/.bashrc
+echo 'command git "$@"' >> ~/.bashrc
+echo 'play ~/exit.mp3 -q' >> ~/.bashrc
+echo 'fi' >> ~/.bashrc
+echo '}' >> ~/.bashrc
