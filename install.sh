@@ -10,6 +10,7 @@ echo 'if [ "$1" = "pull" ]; then' >> ~/.bashrc
 echo 'play ~/sourcebox.mp3 -q &' >> ~/.bashrc
 echo 'MUSIC_PID=$!' >> ~/.bashrc
 echo 'command git pull "${@:2}"' >> ~/.bashrc
+echo 'kill $MUSIC_PID' >> ~/.bashrc
 echo 'play ~/exit.mp3 -q' >> ~/.bashrc
 echo 'else' >> ~/.bashrc
 echo 'command git "$@"' >> ~/.bashrc
